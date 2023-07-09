@@ -40,6 +40,10 @@
       }
       body {
         background: #efefef;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
 
       .bg {
@@ -56,13 +60,13 @@
 
   .card {
     user-select: none;
-    border: 1px solid var(--hexcolor);
-    background-color: var(--grey-2);
-    background: linear-gradient(0deg, var(--grey-1) 0%, #f4f4f440 100%);
+    border: 1px solid var(--hexcolor2);
+    background-color: var(--grey-1);
+    /* background: linear-gradient(0deg, var(--grey-1) 0%, #f4f4f440 100%); */
     box-shadow: 0 7px 20px 5px #f4f4f488;
     border-radius: 0.7rem;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
     overflow: hidden;
     transition: 0.5s all;
   }
@@ -70,17 +74,29 @@
         font-family: 'JetBrains Mono', monospace;
         font-size: 14px;
         color:var(--grey-3);
-        width: 300px;
-        height: 100px;
+        min-width: 300px;
+        padding: 1em 0;
+        min-height: 100px;
         position: absolute;
-        top: 50%;
+        /* top: 50%;
         left: 50%;
-        margin: -50px -150px;
+        margin: -50px -150px; */
         text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
         z-index: 1000;
+      }
+      .card hr {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--hexcolor2);
+    margin-top: 0;
+    opacity: .15;
+  }
+      h1 {
+        font-size: 16px;
+        margin: 1em;
       }
 </style>
 
@@ -88,13 +104,15 @@
   <body>
     <div class="bg" id="bg">
 
-        <div class="card loading-message">
-        <p>
-            Loading the dashboard.
-            <br />
-            This may take a few seconds.
-        </p>
-        </div>
+    </div>
+    <div class="card loading-message">
+        <h1>SOMBR: Interactive SOM for BR Triage</h1>
+        <hr>
+    <p>
+        Loading the dashboard.
+        <br />
+        This may take a few seconds.
+    </p>
     </div>
 
 
