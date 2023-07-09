@@ -18,7 +18,7 @@
     <meta name="robots" content="noindex, nofollow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
     <!-- This is the small icon that shows up in the browser tab -->
-    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="shortcut icon" href="./sombr-logo.png" />
 
     <style>
       @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
@@ -35,11 +35,11 @@
         --accent-color-dark: #2F4858;
         --color-white: #EEEEEE;
         --grey-1: #ffffff22;
-        --grey-2: #3d3d3d22;
+        --grey-2: #3d3d3d99;
         --grey-3: #121724;
       }
       body {
-        background: #efefef;
+        background: var(--color-white);
         display:flex;
         flex-direction: column;
         justify-content: center;
@@ -60,15 +60,10 @@
 
   .card {
     user-select: none;
-    border: 1px solid var(--hexcolor2);
-    background-color: var(--grey-1);
-    /* background: linear-gradient(0deg, var(--grey-1) 0%, #f4f4f440 100%); */
-    box-shadow: 0 7px 20px 5px #f4f4f488;
+    /* border: 1px solid var(--hexcolor2); */
     border-radius: 0.7rem;
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-    overflow: hidden;
-    transition: 0.5s all;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: #FEFEFE;
   }
       .loading-message {
         font-family: 'JetBrains Mono', monospace;
@@ -98,6 +93,46 @@
         font-size: 16px;
         margin: 1em;
       }
+      img.logo {
+        margin: 0 auto;
+        width:50px;
+
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+
+            -webkit-animation-name: pulse;
+            animation-name: pulse;
+
+            animation-iteration-count: infinite;
+            -webkit-animation-iteration-count: infinite;
+
+      }
+
+      .logo1 {
+        animation-delay: .0s;
+        -webkit-animation-delay: .0s;
+
+      }
+      .logo2 {
+        animation-delay: .2s;
+        -webkit-animation-delay: .2s;
+
+      }
+      .logo3 {
+        animation-delay: .4s;
+        -webkit-animation-delay: .4s;
+
+      }
+
+      @keyframes pulse {
+   0%, 5% { transform: scale(.5); }
+   50% { transform: scale(1.1); }
+   60% { transform: scale(1.1); }
+   95%, 100% { transform: scale(.5); } 
+} 
 </style>
 
   </head>
@@ -106,6 +141,11 @@
 
     </div>
     <div class="card loading-message">
+        <div class="logo-wrapper">
+            <img class="logo logo1" src="./sombr-logo.png">
+            <img class="logo logo2" src="./sombr-logo.png">
+            <img class="logo logo3" src="./sombr-logo.png">
+        </div>
         <h1>SOMBR: Interactive SOM for BR Triage</h1>
         <hr>
     <p>
@@ -117,7 +157,7 @@
 
 
 
-    <script src="./js/three.min.js"></script>
+    <!-- <script src="./js/three.min.js"></script>
     <script src="./js/vanta.net.min.js"></script>
     <script>
     VANTA.NET({
@@ -134,6 +174,6 @@
       maxDistance: 24.00,
       spacing: 17.00
     })
-    </script>
+    </script> -->
   </body>
 </html>
